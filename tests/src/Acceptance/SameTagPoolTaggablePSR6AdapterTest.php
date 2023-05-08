@@ -12,17 +12,17 @@ declare(strict_types = 1);
  * with this source code in the file LICENSE.
  */
 
-namespace Cache\Taggable\Tests;
+namespace Cache\Taggable\Tests\Acceptance;
 
 use Cache\IntegrationTests\TaggableCachePoolTest;
 use Cache\Taggable\TaggablePSR6PoolAdapter;
 use Cache\TagInterop\TaggableCacheItemPoolInterface;
 use Symfony\Component\Cache\Adapter\ArrayAdapter as SymfonyArrayAdapter;
 
-class SeparateTagPoolPSR6AdapterTest extends TaggableCachePoolTest
+class SameTagPoolTaggablePSR6AdapterTest extends TaggableCachePoolTest
 {
     public function createCachePool(): TaggableCacheItemPoolInterface
     {
-        return TaggablePSR6PoolAdapter::makeTaggable(new SymfonyArrayAdapter(), new SymfonyArrayAdapter());
+        return TaggablePSR6PoolAdapter::makeTaggable(new SymfonyArrayAdapter());
     }
 }
