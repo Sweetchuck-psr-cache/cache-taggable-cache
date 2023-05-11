@@ -1,0 +1,11 @@
+parameters:
+    ignoreErrors:
+        -
+            message: "#^Method Cache\\\\Taggable\\\\TaggablePSR6ItemAdapter\\:\\:makeTaggable\\(\\) should return static\\(Cache\\\\Taggable\\\\TaggablePSR6ItemAdapter\\) but returns Cache\\\\Taggable\\\\TaggablePSR6ItemAdapter\\.$#"
+            count: 1
+            path: ../src/TaggablePSR6ItemAdapter.php
+
+        -
+            message: "#^Method Cache\\\\Taggable\\\\TaggablePSR6PoolAdapter\\:\\:getItems\\(\\) should return iterable\\<string, Cache\\\\TagInterop\\\\TaggableCacheItemInterface\\> but returns array\\<int\\|string, Cache\\\\Taggable\\\\TaggablePSR6ItemAdapter\\>\\.$#"
+            count: 1
+            path: ../src/TaggablePSR6PoolAdapter.php
